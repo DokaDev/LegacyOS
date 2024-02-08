@@ -19,3 +19,4 @@ elf_bin: $(OBJPATH)/bin32.elf
 	$(OBJCOPY32) $^ $(OBJPATH)/kernel.bin
 
 kernelBin: $(OBJPATH)/kernel.bin $(OBJPATH)/entryPoint.bin
+	cat $^ > ../../build/kernel32.bin
