@@ -2,7 +2,7 @@
 #include "legacyio.h"
 #include "color.h"
 
-void main() {
+void Main() {
     printStr("Hello", WHITE, 0, 0);
 
     while(1)
