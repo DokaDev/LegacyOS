@@ -27,4 +27,4 @@ clean:
 	rm -f tools/ImageMaker/bin/*.*
 
 test:
-	# qemu-system-i386 -fda build/os.img
+	# qemu-system-x86_64 -fda build/os.img
