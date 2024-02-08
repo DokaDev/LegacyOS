@@ -1,0 +1,9 @@
+build/
+
+src/boot/*.o
+src/boot/*.bin
+
+src/x86/tmp/*.o
+src/x86/tmp/*.bin
+src/x86/tmp/*.elf
+src/x86/tmp/*.d
