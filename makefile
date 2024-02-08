@@ -27,4 +27,4 @@ clean:
 	rm -f tools/ImageMaker/bin/*.*
 
 test:
-	# qemu-system-x86_64 -fda build/os.img
+	# qemu-system-x86_64 -m 64 -fda build/os.img -rtc base=localtime -M pc
