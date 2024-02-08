@@ -35,3 +35,24 @@ The script contains `clean` label that automatically cleans the build temporary 
 ```bash
 make
 ```
+
+### Testing with QEMU
+To ensure our OS works as expected in a virtualized environment, we leverage QEMU for comprehensive testing.
+Follow the steps below to run tests on your system using QEMU.
+
+#### Prerequisites
+Before running tests, make sure you have QEMU installed on your system.
+QEMU is a generic and open source machine emulator and virtualizer, which is essential for our testing process.
+
+#### Running Tests
+To run tests, simply use the `make test` command.
+This command builds the necessary components and executes our operating system in a QEMU virtual machine, allowing us to observe and evaluate its behavior in a controlled environment.
+```bash
+make test
+```
+
+#### Installing QEMU
+If QEMU is not already installed on your system, you can install it using the following command on Debian-based systems(such as Ubuntu):
+```bash
+sudo apt-get install qemu-kvm
+```
