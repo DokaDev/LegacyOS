@@ -1,4 +1,4 @@
-all: ImageMaker
+all: imgMaker
 
-ImageMaker:
+imgMaker:
 	make -C ImageMaker

@@ -1,6 +1,6 @@
 all: build
 
-build:
+build: $(wildcard ./*.c)
 	mkdir -p bin
 
-	gcc -o bin/ImageMaker imageMaker.c
+	gcc -o bin/ImageMaker $^

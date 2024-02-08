@@ -1,3 +1,5 @@
+#include "writeKernel.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -7,7 +9,7 @@
 #include <sys/stat.h>
 #include <errno.h>
 
-#include "writeKernel.h"
+#define BYTEOFSECTOR 512
 
 int adjustInSectorSize(int fd, int size) { 
     int i;
