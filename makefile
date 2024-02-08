@@ -13,6 +13,8 @@ image: build/boot.bin build/kernel32.bin
 
 
 clean: 
+	clear
+
 	rm -f build/*.*
 
 	rm -f src/boot/*.o
