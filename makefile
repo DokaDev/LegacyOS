@@ -1,6 +1,7 @@
 all: clean kernel image
 
 kernel:
+	mkdir -p build
 	make -C src
 
 image: build/boot.bin build/kernel32.bin
@@ -17,3 +18,5 @@ clean:
 	rm -f src/x86/tmp/*.bin
 	rm -f src/x86/tmp/*.elf
 
+qemu:
+	qemu
