@@ -8,8 +8,8 @@ utility:
 	make -C tools
 
 image: build/boot.bin build/kernel32.bin
+	tools/ImageMaker/bin/ImageMaker $^
 	# cat $^ > build/os.img
-
 
 clean: 
 	clear
@@ -27,4 +27,4 @@ clean:
 	rm -f tools/ImageMaker/bin/*.*
 
 test:
-	qemu-system-x86_64 -m 64 -fda build/os.img -rtc base=localtime -M pc
+	qemu-system-x86_64 -m 64 -fda os.img -rtc base=localtime -M pc

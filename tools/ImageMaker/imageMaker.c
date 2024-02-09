@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Open the source file
-    if((targetFd = open("Disk.img", O_RDWR | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR)) == -1) {
+    if((targetFd = open("build/Disk.img", O_RDWR | O_CREAT | O_TRUNC | S_IREAD | S_IWRITE)) == -1) {
         fprintf(stderr, "[ERROR] Disk.img open failed.\n");
         exit(-1);
     }
