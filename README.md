@@ -1,7 +1,7 @@
 ## LegacyOS
 ROM BIOS-based MBR Operating System Project
 
-The project is based on `mint64` project
+<!-- The project is based on `mint64` project -->
 
 ### Build Instructions
 This project is designed to be build for the i386 architecture, specifically targeting low-level systems programming.
