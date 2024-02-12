@@ -31,10 +31,10 @@ clearScreen:
 diskLoad:
     ; floppy
 
-    init_disk:
+    init_disk: ; dx = dl dh
         mov ah, 0   ; reset disk
         mov dl, 0   ; drive 0
-        int 0x13    ; call bios
+        int 0x13    ; call bios(disk)
         jc handle_diskError
 
     ; read sector from disk
@@ -84,6 +84,7 @@ diskLoad:
 
     handle_diskError:
         jmp $
+
 
 totalSectorCount: dw 0x02
 protectedModeKernelSectorCount: dw 0x02

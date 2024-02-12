@@ -5,7 +5,7 @@ OBJCOPY32 = objcopy -j .text -j .data -j .rodata -j .bss -S -O binary
 OBJPATH = tmp
 all: entry cdeps binary elf_bin kernelBin
 
-entry: ./entryPoint.s
+entry: ./EntryPoint.s
 	mkdir -p $(OBJPATH)
 	nasm -o $(OBJPATH)/entryPoint.bin $^
 
