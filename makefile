@@ -24,7 +24,7 @@ clean:
 	rm -f src/x86/tmp/*.elf
 	rm -f src/x86/tmp/*.d
 
-	rm -f tools/ImageMaker/bin/*.*
+	rm -f tools/ImageMaker/bin/ImageMaker
 
 test:
 	qemu-system-x86_64 -m 64 -fda os.img -rtc base=localtime -M pc
