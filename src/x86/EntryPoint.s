@@ -31,7 +31,6 @@ protected_mode:
 
     jmp dword 0x08: 0x10200 ; enter c code
 
-; SECTION .data
 align 8, db 0
 
 dw 0    ; 
@@ -64,5 +63,8 @@ gdt_start:
         db 0xcf     ; G=1, D/B=1, L=0, AVL=0, limit[16:19]=0xf
         db 0        ; base[31:24]
 gdt_end:
+
+; 보호 모드로 전환되었다는 메시지
+SWITCHSUCCESSMESSAGE: db 'Switch To Protected Mode Success~!!', 0
 
 times 512-($-$$) db 0  ; pad the GDT to 512 bytes

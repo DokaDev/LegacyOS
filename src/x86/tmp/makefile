@@ -7,7 +7,7 @@ LD32 = ld -melf_i386 -T ../elf_i386.ld -nostdlib -e Main -Ttext 0x10200
 %.o: ../%.asm
 	nasm -f elf32 -o $@ $<
 
-bin32.elf: main.o $(subst main.o, , $(notdir $(patsubst %.c, %.o, $(wildcard ../*.c)))) $(notdir $(patsubst %.asm, %.o, $(wildcard ../*.asm)))
+bin32.elf: Main.o $(subst Main.o, , $(notdir $(patsubst %.c, %.o, $(wildcard ../*.c)))) $(notdir $(patsubst %.asm, %.o, $(wildcard ../*.asm)))
 	$(LD32) -o $@ $^
 
 ifeq (deps.d, $(wildcard ./deps.d))

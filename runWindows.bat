@@ -1,1 +1,1 @@
-qemu-system-x86_64.exe -m 64 -fda build/OS.img -boot a -rtc base=localtime -M pc
+misc/qemu-0.10.4/qemu-system-x86_64.exe -L . -m 64 -fda ../../build/OS.img -boot a -localtime -M pc

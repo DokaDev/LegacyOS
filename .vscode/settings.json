@@ -3,6 +3,8 @@
         "types.h": "c",
         "errno.h": "c",
         "writekernel.h": "c",
-        "uio.h": "c"
+        "uio.h": "c",
+        "legacyio.h": "c",
+        "color.h": "c"
     }
 }
