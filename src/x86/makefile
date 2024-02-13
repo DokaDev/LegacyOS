@@ -10,7 +10,7 @@ entry: ./EntryPoint.s
 	nasm -o $(OBJPATH)/entryPoint.bin $^
 
 cdeps:
-	$(GCC32) -MM $(wildcard ./*.c) > $(OBJPATH)/deps.d
+	$(GCC32) -c -MM $(wildcard ./*.c) > $(OBJPATH)/deps.d
 
 binary:
 	make -C $(OBJPATH)

@@ -2,7 +2,7 @@ GCC32 = gcc -c -m32 -ffreestanding
 LD32 = ld -melf_i386 -T ../elf_i386.ld -nostdlib -e Main -Ttext 0x10200
 
 %.o: ../%.c
-	$(GCC32) $<
+	$(GCC32) -c $<
 
 %.o: ../%.asm
 	nasm -f elf32 -o $@ $<
