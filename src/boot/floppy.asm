@@ -29,6 +29,8 @@ clearScreen:
         jl loop_clearScreen
 
 diskLoad:
+    mov byte[es:0], 'A'
+    mov byte[es:1], 0x0A
     ; floppy
 
     init_disk: ; dx = dl dh
@@ -61,13 +63,13 @@ diskLoad:
         jc handle_diskError
 
         ; move to next sector
-        add si, 512 ; 512 bytes per sector
+        add si, 0x0020 ; 512 bytes per sector
         mov es, si
 
         mov al, byte[sectorNumber]
         add al, 1
         mov byte[sectorNumber], al
-        cmp al, 37 ; 0x25
+        cmp al, 19 ; 0x25
         jl read
 
         xor byte[headNumber], 1     ; toggle head number
@@ -80,11 +82,11 @@ diskLoad:
         jmp read
 
     end_read:
+        
         jmp 0x1000:0x0000 ; jump to the protected mode kernel
 
     handle_diskError:
         jmp $
-
 
 totalSectorCount: dw 0x02
 protectedModeKernelSectorCount: dw 0x02
